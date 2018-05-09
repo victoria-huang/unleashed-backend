@@ -343,15 +343,8 @@ Npc.delete_all
 DogCollectable.delete_all
 
 def getRandomLocationId
-
   loc = Location.offset(rand(Location.count)).first.id
-<<<<<<< HEAD
   while DogCollectable.find_by(location_id: loc)
-=======
-  # byebug
-  while DogCollectable.find_by(location_id: loc) do
-    # byebug
->>>>>>> bf80117ab0af9230c111dd220b0f54c9312f4d8f
     loc = Location.offset(rand(Location.count)).first.id
   end
   loc
